@@ -13,13 +13,13 @@ Q:This group of 4 spider man valains are consindered to be the "blank"
 A:boys
 Moke
 $100
-Q:Lage orange moke's are largly classified as
-A:Oranotangs
+Q: This lage orange moke's is commonly known as an
+A:Oranotang
 $200
-Q:In the movie planet of the apes Ceser is this type of moke 
+Q:In the movie planet of the apes the chracter Ceser is this spcieces of moke 
 A:Chimpanze
 $400
-Q:In this meme template a chipanze is urging readers to return to what
+Q:In this meme template a chipanze is urging readers to return to "blank"
 A:Monke
 $800
 Q:This subspicies of monke is native to only this african island 
@@ -42,7 +42,7 @@ $100
 Q:This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)
 A:one
 $200
-Q:This artical of clothing witch also adorns the head of the games mascot is a famous monopoly token
+Q:This artical of clothing witch also adorns the head of the games mascot is a famous playable token
 A:Tophat
 $400
 Q:This is the monopoly mans prefered tittle 
