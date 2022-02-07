@@ -35,5 +35,5 @@ $400
 Q:what is Michaels name
 A:Michael
 $800
-Q:what is my Name
+Q:What is my name
 A:NONE OF YO BUISINUS
