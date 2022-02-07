@@ -37,3 +37,29 @@ A:Michael
 $800
 Q:What is my name
 A:NONE OF YO BUISINUS
+Monopoly
+$100
+Q:This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)
+A:one
+$200
+Q:This artical of clothing witch also adorns the head of the games mascot is a famous monopoly token
+A:Tophat
+$400
+Q:This is the monopoly mans prefered tittle 
+A:Mr
+$800
+Q:There are this many tiles on a monopoly board (number value ex: 13, 74, 10010102) 
+A:40
+Space 
+$100
+Q:The sun is classified as this celstial object
+A:Star
+$200
+Q:There are this many planets orbating the sun in our solar system
+A:8
+$400
+Q:The earth has a dimater of this size (in km)(numeric value ex: 2923983)
+A:12742
+$800
+Q:The sun is about this many times larger then the earth (numeric value ex:858585858) 
+A:1300000
