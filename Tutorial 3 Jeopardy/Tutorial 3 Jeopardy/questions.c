@@ -62,10 +62,76 @@ void initialize_game(void)
     questions[7].value = 800;
     questions[7].answered =  false;
 
-    strcpy(questions[8].category, "");
-    strcpy(questions[8].question, "");
-    strcpy(questions[8].answer, "");
+    strcpy(questions[8].category, "Big Brain");
+    strcpy(questions[8].question, "This is Ridwans name");
+    strcpy(questions[8].answer, "Ridwan");
+    questions[8].value = 100;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Big Brain");
+    strcpy(questions[8].question, "This is Ahmets name");
+    strcpy(questions[8].answer, "Ahmet");
     questions[8].value = 200;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Big Brain");
+    strcpy(questions[8].question, "This is Michaels name");
+    strcpy(questions[8].answer, "Michael");
+    questions[8].value = 400;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Big Brain");
+    strcpy(questions[8].question, "This is my name");
+    strcpy(questions[8].answer, "NONE OF YO BUISINUS");
+    questions[8].value = 800;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Monopoly");
+    strcpy(questions[8].question, "This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)");
+    strcpy(questions[8].answer, "One");
+    questions[8].value = 100;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Monopoly");
+    strcpy(questions[8].question, "This artical of clothing witch also adorns the head of the games mascot is a famous playable token");
+    strcpy(questions[8].answer, "Tophat");
+    questions[8].value = 200;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Monopoly");
+    strcpy(questions[8].question, "This is the monopoly mans prefered tittle");
+    strcpy(questions[8].answer, "Mr");
+    questions[8].value = 400;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Monopoly");
+    strcpy(questions[8].question, "There are this many tiles on a monopoly board");
+    strcpy(questions[8].answer, "40");
+    questions[8].value = 800;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Space");
+    strcpy(questions[8].question, "The sun is classified as this celstial object");
+    strcpy(questions[8].answer, "Star");
+    questions[8].value = 100;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Space");
+    strcpy(questions[8].question, "There are this many planets orbating the sun in our solar system (numeric value ex: 8)");
+    strcpy(questions[8].answer, "8");
+    questions[8].value = 200;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Space");
+    strcpy(questions[8].question, "The earth has a dimater of this size (in km) (numeric value ex: 12742)");
+    strcpy(questions[8].answer, "12742");
+    questions[8].value = 400;
+    questions[8].answered =  false;
+
+    strcpy(questions[8].category, "Space");
+    strcpy(questions[8].question, "The sun is about this many times larger then the earth (numeric value ex:1300000)");
+    strcpy(questions[8].answer, "1300000");
+    questions[8].value = 800;
     questions[8].answered =  false;
 }
 
