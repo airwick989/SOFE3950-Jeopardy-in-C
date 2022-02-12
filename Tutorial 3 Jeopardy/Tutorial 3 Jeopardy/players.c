@@ -18,12 +18,12 @@ bool player_exists(player* players, char* name)
     int num_players = sizeof(players)
     for(i = 0; i <= num_players; i++){
         if(players[i].name == name){
-            exist_name = true;
+            exist_name = true; //Player is in Jeopardy game
             
         }
 
         else{
-            exist_name = false;
+            exist_name = false; //Player not participated in Jeopardy
         }
 
     }
