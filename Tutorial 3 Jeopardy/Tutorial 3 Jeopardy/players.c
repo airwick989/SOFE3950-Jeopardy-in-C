@@ -13,7 +13,7 @@
  // Finds and return matching player names involved in Jeopardy Game
 bool player_exists(player* players, char* name)
 {
-    bool exist_name;
+    bool exist_name = true;
     int i;
     int num_players = sizeof(players);
     for(i = 0; i <= num_players; i++){
