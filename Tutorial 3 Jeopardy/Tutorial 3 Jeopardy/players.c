@@ -45,6 +45,7 @@ void score_update(player* players, char* name, int score)
         }
 
         else{
+            
             return false;
         }
     }
