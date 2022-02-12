@@ -9,6 +9,8 @@
 #include <string.h>
 #include "questions.h"
 
+bool act = false;
+
  // Initializes the array of questions for the game
 void initialize_game(void)
 {
@@ -137,7 +139,7 @@ void initialize_game(void)
 // Displays each of the remaining categories and question which have not been answered
 void display_categories(void)
 {
-    int topicOne, topicTwo, topicThree;
+    int topicOne, topicTwo, topicThree; 
 
     if (act == false){
         int lower = 1, upper = 5;// initilizes the bounds for the random number generator 
@@ -167,7 +169,7 @@ void display_categories(void)
         }
     }
 
-    printf("---------------------------geepardy---------------------------")
+    printf("---------------------------geepardy---------------------------");
     printf("  %s  |  %s  |  %s  \n", categories[topicOne], categories[topicTwo], categories[topicThree]);
     printf("--------------------------------------------------------------");
 
