@@ -40,7 +40,13 @@ void score_update(player* players, char* name, int score)
 
     for (j = 0; j <= num_of_players; ++j)
     {
-        if ()
+        if (players[j].name == name){
+            players[j].score = score;
+        }
+
+        else{
+            return false;
+        }
     }
 
 }
