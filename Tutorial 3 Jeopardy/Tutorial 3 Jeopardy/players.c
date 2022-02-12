@@ -13,9 +13,9 @@
  // Finds and return matching player names involved in Jeopardy Game
 bool player_exists(player* players, char* name)
 {
-    bool exist_name;
+    bool exist_name = true;
     int i;
-    int num_players = sizeof(players)
+    int num_players = sizeof(players);
     for(i = 0; i <= num_players; i++){
         if(players[i].name == name){
             exist_name = true; //Player is in Jeopardy game
@@ -32,7 +32,7 @@ bool player_exists(player* players, char* name)
 }
 
 //Updates score when the player guesses the correct answer
-void score_update(player* players, char* name, int score)
+void update_score(player* players, char* name, int score)
 {
 
     int num_of_players;
@@ -44,10 +44,7 @@ void score_update(player* players, char* name, int score)
             players[j].score = score;
         }
 
-        else{
-            
-            return false;
-        }
+    
     }
 
 }
