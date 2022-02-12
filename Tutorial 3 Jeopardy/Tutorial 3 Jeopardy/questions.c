@@ -9,7 +9,6 @@
 #include <string.h>
 #include "questions.h"
 
-bool act = false;
 
  // Initializes the array of questions for the game
 void initialize_game(void)
@@ -63,104 +62,38 @@ void initialize_game(void)
     questions[7].value = 800;
     questions[7].answered =  false;
 
-    strcpy(questions[8].category, "Big Brain");
-    strcpy(questions[8].question, "This is Ridwans name");
-    strcpy(questions[8].answer, "Ridwan");
+    strcpy(questions[8].category, "Monopoly");
+    strcpy(questions[8].question, "This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)");
+    strcpy(questions[8].answer, "One");
     questions[8].value = 100;
     questions[8].answered =  false;
 
-    strcpy(questions[9].category, "Big Brain");
-    strcpy(questions[9].question, "This is Ahmets name");
-    strcpy(questions[9].answer, "Ahmet");
+    strcpy(questions[9].category, "Monopoly");
+    strcpy(questions[9].question, "This artical of clothing witch also adorns the head of the games mascot is a famous playable token");
+    strcpy(questions[9].answer, "Tophat");
     questions[9].value = 200;
     questions[9].answered =  false;
 
-    strcpy(questions[10].category, "Big Brain");
-    strcpy(questions[10].question, "This is Michaels name");
-    strcpy(questions[10].answer, "Michael");
+    strcpy(questions[10].category, "Monopoly");
+    strcpy(questions[10].question, "This is the monopoly mans prefered tittle");
+    strcpy(questions[10].answer, "Mr");
     questions[10].value = 400;
     questions[10].answered =  false;
 
-    strcpy(questions[11].category, "Big Brain");
-    strcpy(questions[11].question, "This is my name");
-    strcpy(questions[11].answer, "NONE OF YO BUISINUS");
+    strcpy(questions[11].category, "Monopoly");
+    strcpy(questions[11].question, "There are this many tiles on a monopoly board");
+    strcpy(questions[11].answer, "40");
     questions[11].value = 800;
     questions[11].answered =  false;
 
-    strcpy(questions[12].category, "Monopoly");
-    strcpy(questions[12].question, "This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)");
-    strcpy(questions[12].answer, "One");
-    questions[12].value = 100;
-    questions[12].answered =  false;
-
-    strcpy(questions[13].category, "Monopoly");
-    strcpy(questions[13].question, "This artical of clothing witch also adorns the head of the games mascot is a famous playable token");
-    strcpy(questions[13].answer, "Tophat");
-    questions[13].value = 200;
-    questions[13].answered =  false;
-
-    strcpy(questions[14].category, "Monopoly");
-    strcpy(questions[14].question, "This is the monopoly mans prefered tittle");
-    strcpy(questions[14].answer, "Mr");
-    questions[14].value = 400;
-    questions[14].answered =  false;
-
-    strcpy(questions[15].category, "Monopoly");
-    strcpy(questions[15].question, "There are this many tiles on a monopoly board");
-    strcpy(questions[15].answer, "40");
-    questions[15].value = 800;
-    questions[15].answered =  false;
-
-    strcpy(questions[16].category, "Space");
-    strcpy(questions[16].question, "The sun is classified as this celstial object");
-    strcpy(questions[16].answer, "Star");
-    questions[16].value = 100;
-    questions[16].answered =  false;
-
-    strcpy(questions[17].category, "Space");
-    strcpy(questions[17].question, "There are this many planets orbating the sun in our solar system (numeric value ex: 8)");
-    strcpy(questions[17].answer, "8");
-    questions[17].value = 200;
-    questions[17].answered =  false;
-
-    strcpy(questions[18].category, "Space");
-    strcpy(questions[18].question, "The earth has a dimater of this size (in km) (numeric value ex: 12742)");
-    strcpy(questions[18].answer, "12742");
-    questions[18].value = 400;
-    questions[18].answered =  false;
-
-    strcpy(questions[19].category, "Space"); 
-    strcpy(questions[19].question, "The sun is about this many times larger then the earth (numeric value ex:1300000)");
-    strcpy(questions[19].answer, "1300000");
-    questions[19].value = 800;
-    questions[19].answered =  false;
 }
 
 // Displays each of the remaining categories and question which have not been answered
 void display_categories(void)
 {
-    int topicOne, topicTwo, topicThree; 
+    char questVall[12][20];
 
-    if (act == false){
-        int lower = 1, upper = 5;// initilizes the bounds for the random number generator 
-        int catRans[3] = {0, 0, 0};// initilizes the randomly selected questions catigories 
-
-        for (int i = 0; i < 3; i++) {// must selct 3 categories 
-            int catRan = 0; // starts equal to the catigories inorder to enter the loop
-            while(catRan == catRans[0] || catRan == catRans[1] || catRan == catRans[2]){// no catigory can be the same so the randomly chosen one is comparied to the already chosen ones to ensure indivuality
-                catRan = (rand()%(upper - lower + 1)) + lower; // gens the random number 
-            }
-            catRans[i] = catRan;// after aceptince the catagory number is saved 
-        }
-     act = true;
-     topicOne = (catRans[0]-1);
-     topicTwo = (catRans[1]-1);
-     topicThree = (catRans[2]-1);
-    }
-
-    char questVall[20][20];
-
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 12; i++){
         if (questions[i].answered == false){
             snprintf(questVall[i], 20, "%d", questions[i].value);
         }
@@ -170,26 +103,26 @@ void display_categories(void)
     }
 
     printf("---------------------------geepardy---------------------------");
-    printf("  %s  |  %s  |  %s  \n", categories[topicOne], categories[topicTwo], categories[topicThree]);
+    printf("  %s  |  %s  |  %s  \n", categories[0], categories[1], categories[2]);
     printf("--------------------------------------------------------------");
 
-    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+1], questVall[((topicTwo-1)*5)+1], questVall[((topicThree-1)*5)+1]);
+    printf("  %s  |  %s  |  %s  \n", questVall[0], questVall[1], questVall[2]);
     printf("--------------------------------------------------------------");
 
-    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+2], questVall[((topicTwo-1)*5)+2], questVall[((topicThree-1)*5)+2]);
+    printf("  %s  |  %s  |  %s  \n", questVall[3], questVall[4], questVall[5]);
     printf("--------------------------------------------------------------");
 
-    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+3], questVall[((topicTwo-1)*5)+3], questVall[((topicThree-1)*5)+3]);
+    printf("  %s  |  %s  |  %s  \n", questVall[6], questVall[7], questVall[8]);
     printf("--------------------------------------------------------------");
 
-    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+4], questVall[((topicTwo-1)*5)+4], questVall[((topicThree-1)*5)+4]);
+    printf("  %s  |  %s  |  %s  \n", questVall[9], questVall[10], questVall[11]);
     printf("--------------------------------------------------------------");
 }
 
 // Displays the question for the category and dollar value
 void display_question(char* category, int value)
 {
-    for (int i = 0; i < 20; i++){
+    for (int i = 0; i < 12; i++){
         if((questions[i].category == category) && (questions[i].value == value)){
             printf("Question: %s\n", questions[i].question);
         }
@@ -201,7 +134,7 @@ bool valid_answer(char* category, int value, char* answer)
 {
     bool check;
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 12; i++) {
         if ((questions[i].category == category) && (questions[i].value == value)) {
             if (strcmp(questions[i].answer, answer) == 0) {
 
@@ -223,7 +156,7 @@ bool already_answered(char* category, int value)
     {
     bool complete;
 
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 12; i++) {
         
         if ((questions[i].category == category) && (questions[i].value == value)) {
             
@@ -245,7 +178,7 @@ bool already_answered(char* category, int value)
 
 void question_answered(char *category, int value)
 {
-    for (int i = 0; i < 20; i++) {
+    for (int i = 0; i < 12; i++) {
         
         if ((questions[i].category == category) && (questions[i].value == value)) {
             
