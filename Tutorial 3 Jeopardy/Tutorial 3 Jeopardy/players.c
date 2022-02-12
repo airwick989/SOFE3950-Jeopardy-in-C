@@ -11,7 +11,7 @@
 #include "players.h"
 
  // Returns true if the player name matches one of the existing players
-bool player_exists(player* players, int num_players, char* name)
+bool player_exists(player* players, char* name)
 {
     bool exist_name;
     int i;
@@ -30,8 +30,16 @@ bool player_exists(player* players, int num_players, char* name)
     return exist_name;
 }
 
-
-void update_score(player* players, int num_players, char* name, int score)
+//Updates score when the player guesses the correct answer
+void score_update(player* players, char* name, int score)
 {
+
+    int num_of_players;
+    int j = 0;
+
+    for (j = 0; j <= num_of_players; ++j)
+    {
+        if ()
+    }
 
 }
