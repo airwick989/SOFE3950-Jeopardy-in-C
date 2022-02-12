@@ -1,8 +1,7 @@
 /*
- * Tutorial 4 Jeopardy Project for SOFE 3950U / CSCI 3020U: Operating Systems
+ * Tutorial 3 Jeopardy Project for SOFE 3950U: Operating Systems
  *
  * Copyright (C) 2022, <Ridwan Hossain, Micheal Metry, Joshua White>
- * All rights reserved.
  *
  */
 #include <stdio.h>
@@ -68,77 +67,89 @@ void initialize_game(void)
     questions[8].value = 100;
     questions[8].answered =  false;
 
-    strcpy(questions[8].category, "Big Brain");
-    strcpy(questions[8].question, "This is Ahmets name");
-    strcpy(questions[8].answer, "Ahmet");
-    questions[8].value = 200;
-    questions[8].answered =  false;
+    strcpy(questions[9].category, "Big Brain");
+    strcpy(questions[9].question, "This is Ahmets name");
+    strcpy(questions[9].answer, "Ahmet");
+    questions[9].value = 200;
+    questions[9].answered =  false;
 
-    strcpy(questions[8].category, "Big Brain");
-    strcpy(questions[8].question, "This is Michaels name");
-    strcpy(questions[8].answer, "Michael");
-    questions[8].value = 400;
-    questions[8].answered =  false;
+    strcpy(questions[10].category, "Big Brain");
+    strcpy(questions[10].question, "This is Michaels name");
+    strcpy(questions[10].answer, "Michael");
+    questions[10].value = 400;
+    questions[10].answered =  false;
 
-    strcpy(questions[8].category, "Big Brain");
-    strcpy(questions[8].question, "This is my name");
-    strcpy(questions[8].answer, "NONE OF YO BUISINUS");
-    questions[8].value = 800;
-    questions[8].answered =  false;
+    strcpy(questions[11].category, "Big Brain");
+    strcpy(questions[11].question, "This is my name");
+    strcpy(questions[11].answer, "NONE OF YO BUISINUS");
+    questions[11].value = 800;
+    questions[11].answered =  false;
 
-    strcpy(questions[8].category, "Monopoly");
-    strcpy(questions[8].question, "This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)");
-    strcpy(questions[8].answer, "One");
-    questions[8].value = 100;
-    questions[8].answered =  false;
+    strcpy(questions[12].category, "Monopoly");
+    strcpy(questions[12].question, "This is the lowest value of monopoly currency (wrigthen value ex:therty-seven)");
+    strcpy(questions[12].answer, "One");
+    questions[12].value = 100;
+    questions[12].answered =  false;
 
-    strcpy(questions[8].category, "Monopoly");
-    strcpy(questions[8].question, "This artical of clothing witch also adorns the head of the games mascot is a famous playable token");
-    strcpy(questions[8].answer, "Tophat");
-    questions[8].value = 200;
-    questions[8].answered =  false;
+    strcpy(questions[13].category, "Monopoly");
+    strcpy(questions[13].question, "This artical of clothing witch also adorns the head of the games mascot is a famous playable token");
+    strcpy(questions[13].answer, "Tophat");
+    questions[13].value = 200;
+    questions[13].answered =  false;
 
-    strcpy(questions[8].category, "Monopoly");
-    strcpy(questions[8].question, "This is the monopoly mans prefered tittle");
-    strcpy(questions[8].answer, "Mr");
-    questions[8].value = 400;
-    questions[8].answered =  false;
+    strcpy(questions[14].category, "Monopoly");
+    strcpy(questions[14].question, "This is the monopoly mans prefered tittle");
+    strcpy(questions[14].answer, "Mr");
+    questions[14].value = 400;
+    questions[14].answered =  false;
 
-    strcpy(questions[8].category, "Monopoly");
-    strcpy(questions[8].question, "There are this many tiles on a monopoly board");
-    strcpy(questions[8].answer, "40");
-    questions[8].value = 800;
-    questions[8].answered =  false;
+    strcpy(questions[15].category, "Monopoly");
+    strcpy(questions[15].question, "There are this many tiles on a monopoly board");
+    strcpy(questions[15].answer, "40");
+    questions[15].value = 800;
+    questions[15].answered =  false;
 
-    strcpy(questions[8].category, "Space");
-    strcpy(questions[8].question, "The sun is classified as this celstial object");
-    strcpy(questions[8].answer, "Star");
-    questions[8].value = 100;
-    questions[8].answered =  false;
+    strcpy(questions[16].category, "Space");
+    strcpy(questions[16].question, "The sun is classified as this celstial object");
+    strcpy(questions[16].answer, "Star");
+    questions[16].value = 100;
+    questions[16].answered =  false;
 
-    strcpy(questions[8].category, "Space");
-    strcpy(questions[8].question, "There are this many planets orbating the sun in our solar system (numeric value ex: 8)");
-    strcpy(questions[8].answer, "8");
-    questions[8].value = 200;
-    questions[8].answered =  false;
+    strcpy(questions[17].category, "Space");
+    strcpy(questions[17].question, "There are this many planets orbating the sun in our solar system (numeric value ex: 8)");
+    strcpy(questions[17].answer, "8");
+    questions[17].value = 200;
+    questions[17].answered =  false;
 
-    strcpy(questions[8].category, "Space");
-    strcpy(questions[8].question, "The earth has a dimater of this size (in km) (numeric value ex: 12742)");
-    strcpy(questions[8].answer, "12742");
-    questions[8].value = 400;
-    questions[8].answered =  false;
+    strcpy(questions[18].category, "Space");
+    strcpy(questions[18].question, "The earth has a dimater of this size (in km) (numeric value ex: 12742)");
+    strcpy(questions[18].answer, "12742");
+    questions[18].value = 400;
+    questions[18].answered =  false;
 
-    strcpy(questions[8].category, "Space");
-    strcpy(questions[8].question, "The sun is about this many times larger then the earth (numeric value ex:1300000)");
-    strcpy(questions[8].answer, "1300000");
-    questions[8].value = 800;
-    questions[8].answered =  false;
+    strcpy(questions[19].category, "Space"); 
+    strcpy(questions[19].question, "The sun is about this many times larger then the earth (numeric value ex:1300000)");
+    strcpy(questions[19].answer, "1300000");
+    questions[19].value = 800;
+    questions[19].answered =  false;
 }
 
-// Displays each of the remaining categories and question dollar values that have not been answered
+// Displays each of the remaining categories and question which have not been answered
 void display_categories(void)
 {
-    // print categories and dollar values for each unanswered question in questions array
+    
+        int lower = 1, upper = 5;// initilizes the bounds for the random number generator 
+        int catRans[3] = {0, 0, 0};// initilizes the randomly selected questions catigories 
+
+        for (int i = 0; i < 3; i++) {// must selct 3 categories 
+            int catRan = 0; // starts equal to the catigories inorder to enter the loop
+            while(catRan == catRans[0] && catRan == catRans[1] && catRan == catRans[2]){// no catigory can be the same so the randomly chosen one is comparied to the already chosen ones to ensure indivuality
+                catRan = (rand()%(upper - lower + 1)) + lower; // gens the random number 
+            }
+            catRans[i] = catRan;// after aceptince the catagory number is saved 
+        }
+
+
 }
 
 // Displays the question for the category and dollar value
