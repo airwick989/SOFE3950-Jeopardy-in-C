@@ -38,8 +38,12 @@ int main(int argc, char* argv[])
     initialize_game();
 
     // Prompt for players names
+    printf("Welcome to Jeopardy in C! Enter player names down below:\n");
 
     // initialize each of the players in the array
+    for (int i = 0; i < NUM_PLAYERS; i++) {
+        scanf("%s", players[i].name);
+    }
 
     // Perform an infinite loop getting command input from users until game ends
     while (fgets(buffer, BUFFER_LEN, stdin) != NULL)
