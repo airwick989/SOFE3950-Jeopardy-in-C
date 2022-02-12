@@ -137,37 +137,118 @@ void initialize_game(void)
 // Displays each of the remaining categories and question which have not been answered
 void display_categories(void)
 {
-    
+    int topicOne, topicTwo, topicThree;
+
+    if (act == false){
         int lower = 1, upper = 5;// initilizes the bounds for the random number generator 
         int catRans[3] = {0, 0, 0};// initilizes the randomly selected questions catigories 
 
         for (int i = 0; i < 3; i++) {// must selct 3 categories 
             int catRan = 0; // starts equal to the catigories inorder to enter the loop
-            while(catRan == catRans[0] && catRan == catRans[1] && catRan == catRans[2]){// no catigory can be the same so the randomly chosen one is comparied to the already chosen ones to ensure indivuality
+            while(catRan == catRans[0] || catRan == catRans[1] || catRan == catRans[2]){// no catigory can be the same so the randomly chosen one is comparied to the already chosen ones to ensure indivuality
                 catRan = (rand()%(upper - lower + 1)) + lower; // gens the random number 
             }
             catRans[i] = catRan;// after aceptince the catagory number is saved 
         }
+     act = true;
+     topicOne = (catRans[0]-1);
+     topicTwo = (catRans[1]-1);
+     topicThree = (catRans[2]-1);
+    }
 
+    char questVall[20][20];
 
+    for (int i = 0; i < 20; i++){
+        if (questions[i].answered == false){
+            snprintf(questVall[i], 20, "%d", questions[i].value);
+        }
+        else{
+            strcpy(questVall, " ");
+        }
+    }
+
+    printf("---------------------------geepardy---------------------------")
+    printf("  %s  |  %s  |  %s  \n", categories[topicOne], categories[topicTwo], categories[topicThree]);
+    printf("--------------------------------------------------------------");
+
+    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+1], questVall[((topicTwo-1)*5)+1], questVall[((topicThree-1)*5)+1]);
+    printf("--------------------------------------------------------------");
+
+    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+2], questVall[((topicTwo-1)*5)+2], questVall[((topicThree-1)*5)+2]);
+    printf("--------------------------------------------------------------");
+
+    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+3], questVall[((topicTwo-1)*5)+3], questVall[((topicThree-1)*5)+3]);
+    printf("--------------------------------------------------------------");
+
+    printf("  %s  |  %s  |  %s  \n", questVall[((topicOne-1)*5)+4], questVall[((topicTwo-1)*5)+4], questVall[((topicThree-1)*5)+4]);
+    printf("--------------------------------------------------------------");
 }
 
 // Displays the question for the category and dollar value
 void display_question(char* category, int value)
 {
-
+    for (int i = 0; i < 20; i++){
+        if((questions[i].category == category) && (questions[i].value == value)){
+            printf("Question: %s\n", questions[i].question);
+        }
+    }
 }
 
 // Returns true if the answer is correct for the question for that category and dollar value
 bool valid_answer(char* category, int value, char* answer)
 {
-    // Look into string comparison functions
-    return false;
+    bool check;
+
+    for (int i = 0; i < 20; i++) {
+        if ((questions[i].category == category) && (questions[i].value == value)) {
+            if (strcmp(questions[i].answer, answer) == 0) {
+
+                check = true;
+            
+            } else {
+                
+                check = false;
+            }
+        }
+    }
+
+    return check;
 }
 
 // Returns true if the question has already been answered
 bool already_answered(char* category, int value)
 {
-    // lookup the question and see if it's already been marked as answered
-    return false;
+    {
+    bool complete;
+
+    for (int i = 0; i < 20; i++) {
+        
+        if ((questions[i].category == category) && (questions[i].value == value)) {
+            
+            if (questions[i].answered == true) {
+                
+                complete = true;
+
+            } else {
+
+                complete = false;
+
+            }
+        }
+    }
+
+    return complete;
+    }
+}
+
+void question_answered(char *category, int value)
+{
+    for (int i = 0; i < 20; i++) {
+        
+        if ((questions[i].category == category) && (questions[i].value == value)) {
+            
+            questions[i].answered = true;
+
+        }
+    }
 }
