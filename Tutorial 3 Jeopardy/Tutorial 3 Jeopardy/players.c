@@ -10,7 +10,7 @@
 #include <string.h>
 #include "players.h"
 
- // Returns true if the player name matches one of the existing players
+ // Finds and return matching player names involved in Jeopardy Game
 bool player_exists(player* players, char* name)
 {
     bool exist_name;
